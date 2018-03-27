@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+
+ <meta charset="utf-8" />
+
+ <script language="javascript" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+ <script src="js/script.js"></script>
+ <style type="text/css">
+  body {
+   -webkit-user-select: none;
+   -moz-user-select: -moz-none;
+   -ms-user-select: none;
+   user-select: none;
+   width:100%;
+  }
+
+
+  #round {
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 135%;
+  }
+
+  #message {
+   margin-top: 20px;
+   padding: 10px;
+   line-height: 1.3;
+   font-size: 110%;
+  }
+
+  #round h2 {
+   margin-bottom: 0px;
+   padding: 1px;
+  }
+
+
+  #bigwrap {
+   text-align: center;
+   width: 100%;
+   font-size: 135%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 15px;
+
+  }
+
+  #ballonwrap {
+   height: 420px;
+   border: solid black 1px;
+   border-radius: 5px;
+   width: 100%;
+   background: #fff;
+  }
+
+  #ballon {
+   height: 180px;
+   width: 180px;
+   margin-right: auto;
+   margin-left: auto;
+   margin-bottom: -380px;
+  }
+
+
+  #total{
+   display: table;
+   width: 110%;
+   margin-top: 6px;
+   margin-bottom: 4px;
+   padding-top: 4px;
+   padding-bottom: 4px;
+   background: #fff;
+   border-radius: 5px;
+  }
+  #last_round, #present_1,#present_2{
+   display: table;
+   width: 110%;
+   margin-top: 6px;
+   margin-bottom: 4px;
+   padding-top: 4px;
+   padding-bottom: 4px;
+   background: #fff;
+   border-radius: 5px;
+  }
+
+  #press, #goOn, #collect {
+   font-size:110%;
+   width: 100%;
+  }
+
+  #total_term, #total_value, #last_term, #last_value{
+   display: table-cell;
+   width: 10%;
+  }
+
+  #present_value_term, #present_value, #present_times_term, #present_times{
+   display: table-cell;
+   width: 10%;
+  }
+
+  #total_term, #last_term {
+   text-align: center;
+  }
+
+  #press, #collect, #goOn, #gonext {
+   cursor: pointer;
+   background: #ddd;
+  }
+
+  #press:hover, #collect:hover, #goOn:hover, #gonext:hover {
+   background-color: #c2c2c2;
+  }
+
+  #gonext {
+   font-size: 100%;
+   border-radius: 10px;
+   width: 80%;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 12px;
+  }
+
+  #goOn {
+   display: none;
+  }
+
+ </style>
+
+ <title lang="zh">
+  气球任务测试
+ </title>
+
+</head>
+
+<body>
+
+<audio id="explosion_sound" src="music/explosion.wav" preload="auto"></audio>
+<audio id="tada_sound" src="music/tada.wav" preload="auto"></audio>
+
+<div id="round"></div>
+
+<div id="bigwrap">
+
+
+ <div id="ballonwrap">
+  <div id="message"></div>
+  <div id="gonext"></div>
+  <img src=https://erasmusuniversity.eu.qualtrics.com/ControlPanel/Graphic.php?IM=IM_e40vZ7nffgjMnul id="ballon" alt="Ballon">
+ </div>
+
+ <button type="button" id="press"></button>
+ <button type="button" id="collect"></button>
+
+ <div id="present_round">
+  <div id="present_1">
+   <div id="present_value_term"></div>
+   <div id="present_value"></div>
+  </div>
+  <div id="present_2">
+   <div id="present_times_term"></div>
+   <div id="present_times"></div>
+  </div>
+ </div>
+
+ <div id="last_round">
+  <div id="last_term"></div>
+  <div id="last_value"></div>
+ </div>
+
+
+ <div id="total">
+  <div id="total_term"></div>
+  <div id="total_value"></div>
+ </div>
+
+
+</div>
+
+
+</body>
+
+</html>
