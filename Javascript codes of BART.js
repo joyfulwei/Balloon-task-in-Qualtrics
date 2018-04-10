@@ -19,7 +19,7 @@ $(document).ready(function() {
   var explosion; // will an explosion occur? 1 = yes, 0 = no
   var last_win = 0; // initialize variable that contains the win of the previous round
   var present_win = 0; //initialize variable of win in present around
-  var rounds_played = 3;
+  var rounds_played = 10;
   var exploded = []; // array for saving whether ballon has exploded
   var explode_array =  [15, 9,  16, 26, 22,  8, 27,  17, 23,  29,];
 						
