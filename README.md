@@ -18,3 +18,5 @@ What you need to do:
        
  
  5.Run the game and check the data.
+
+ 6.Please notice that this task in not completeley the same as the seminal work, which was published by Lejuez and Read et al. in 2002, because when the balloon will burst in this task is set randomly, but in the seminal paper, the time when balloon is exploded is probobalistic. So this version is not perfect yet. If you are intertesd, you can work on this version to make a probablistic one.
