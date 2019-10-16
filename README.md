@@ -1,14 +1,17 @@
 # Balloon-task-in-Qualtrics
-Here are the codes that you can refer to deploy Balloon Analogue Risk Task into Qualtrics.
+Here are the codes and images that you may need to deploy Balloon Analogue Risk Task into Qualtrics. 
+1. HTML page
+2. Javascript code
+3. Balloon.png
 
-The steps suggested to follow:
+The steps you should follow to make the BART function well in Qualtrics:
  
- 1. Put the HTML codes into Qualtrics. You can do this clicking the "HTML View" where you edit questions in Qualtrics.
+ 1. Put the HTML codes into Qualtrics. You can start a new queestion in your survey, then click the "HTML View" where you edit questions in Qualtrics. Just copy and paste the codes I have uploaded (HTML page).
  
- 2. Put Javascript codes in Qualtrics. You can refer to the Qualtrics Support to know how to add javascript, here is the link: https://www.qualtrics.com/support/survey-platform/survey-module/question-options/add-javascript/.
+ 2. Put Javascript codes in Qualtrics. You can refer to the Qualtrics Support to know how to add javascript, here is the link: https://www.qualtrics.com/support/survey-platform/survey-module/question-options/add-javascript/. Just copy and paste all the codes I have created (Javascript code).
  
- 3.Download the balloon picture and upload the Balloon image to your Qualtrics library, and change the link address of the picture. After you upload the image successfully, you could find the concerned link in your Qualtrics library.
- here is the code you need to revise:   <img src=https://erasmusuniversity.eu.qualtrics.com/ControlPanel/Graphic.php?IM=IM_e40vZ7nffgjMnul id="ballon" alt="Ballon">, you can find this in the HTML codes.
+ 3.Download the balloon picture and upload the Balloon.png to your Qualtrics library, and change the related link address of the picture. After you upload the image successfully, you could find the concerned link address in your Qualtrics library.
+ And find the code you need to revise:   <img src=https://erasmusuniversity.eu.qualtrics.com/ControlPanel/Graphic.php?IM=IM_e40vZ7nffgjMnul id="ballon" alt="Ballon">, which you could find this in the HTML.
  
  4.In the "survey flow", add "Set Embedded Data" to save the related data. The codes are as below: 
        exploded = ${e://Field/number_pumps}
