@@ -17,3 +17,5 @@ The steps suggested to follow:
  5.Run the game and check the data.
 
 Notice: please be aware of that this task in not completeley the same as the seminal work, which was published by Lejuez and Read et al. in 2002, because when the balloon will burst in this task is set randomly, but in the seminal paper, the time when balloon is exploded is probabilistic. So this version is not perfect yet. If you are intertesd, you can work on this version to make a probabilistic one.
+
+Now the newest version of the BART which could be implemented in Qualtrics has a probablistic manner, thanks to Georg D. Granic's contribuion. 
