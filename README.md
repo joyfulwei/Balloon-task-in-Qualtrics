@@ -2,7 +2,7 @@
 Here are the codes and images that you may need to deploy Balloon Analogue Risk Task into Qualtrics. 
 1. HTML page
 2. Javascript code
-3. Balloon.png
+3. balloon_new.png
 
 The steps you should follow to make the BART function well in Qualtrics:
  
