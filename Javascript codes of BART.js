@@ -21,7 +21,8 @@ $(document).ready(function() {
   var present_win = 0; //initialize variable of win in present around
   var rounds_played = 10;
   var exploded = []; // array for saving whether ballon has exploded
-  var explode_array =  [15, 9,  16, 26, 22,  8, 27,  17, 23,  29,];
+  //var explode_array =  [15, 9,  16, 26, 22,  8, 27,  17, 23,  29,];
+  var BurstProb; //Random variable that determines whether balloon burst
 						
   // initialize language
   var label_press = 'Inflate balloon';
@@ -100,7 +101,7 @@ $(document).ready(function() {
 	$('#outcomes').show();
 	$('#NextButton').show();
 	Qualtrics.SurveyEngine.setEmbeddedData('number_pumps',number_pumps);
-    Qualtrics.SurveyEngine.setEmbeddedData('exploded',exploded);
+        Qualtrics.SurveyEngine.setEmbeddedData('exploded',exploded);
 	Qualtrics.SurveyEngine.setEmbeddedData('total_win',total);
 
 	
@@ -159,11 +160,16 @@ $(document).ready(function() {
   
   // pump button functionality -> 'pressure' in slider bar increases
   $('#press').click(function() {
+     BurstProb = Math.random(); //generate random number between 0 and 1
     if (pumps >= 0 && pumps < maximal_pumps) { // interacts with the collect function, which sets pumps to -1, making the button temporarily unclickable
       explosion = 0; // is set to one if pumping goes beyond explosion point; see below
       pumps += 1;
 	  present_win +=0.25;
-      if (pumps < explode_array[round-1]) {
+	  //Burst probabilty is 1 / (maximal_pumps-pumps+1) as in Read et al. in 2002, so probability to burst increase with number of pumps, pumping becomes more risky
+	  //Because BurstProb is random number between 0 and 1, the propbability that BurstProb > 1/(maximal_pumps-pumps+1) is equal to 1 - 1/(maximal_pumps-pumps+1)
+	  //and the probability that BurstProb < 1/(maximal_pumps-pumps+1) is equal to 1/(maximal_pumps-pumps+1)
+	  //In other words, the ballon will burst with probability 1/(maximal_pumps-pumps+1), and will not burst with probability 1-1/(maximal_pumps-pumps+1)
+      if (BurstProb > 1/(maximal_pumps-pumps+1) {
 	size +=increase;
 	$('#ballon').width(size); 
         $('#ballon').height(size);
@@ -178,6 +184,8 @@ $(document).ready(function() {
 	balloon_explode();
 	exploded.push(explosion); // save whether balloon has exploded or not
 	number_pumps.push(pumpmeup); // save number of pumps
+	 $('#ballon').hide();
+	$('#present_round').hide();
     setTimeout(explosion_message, 1200);
 	setTimeout(gonext_message, 1200);
 	setTimeout(show_last, 1200);
